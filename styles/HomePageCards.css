@@ -1,0 +1,153 @@
+/* Float four columns side by side */
+.col-card {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.col-card .row {
+  margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.col-card .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.col-card .card {
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9); */
+  height: 90px;
+  margin: 60px 50px 0px;
+  padding: 10px;
+  text-align: center;
+  background: linear-gradient(to right, #092f56, #000000);
+  opacity: 85%;
+}
+
+.col-card .card h3 {
+  color: white;
+  margin-top: 15px;
+}
+
+.col-card i {
+  font-size: 32px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.col-card span {
+  font-size: 18px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.parallax {
+  /* The image used */
+  background-image: url("../public/assets/images/parallax/kfm_parallax-min.png");
+
+  /* Set a specific height */
+  min-height: 180px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .col-card {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Responsive text of cards */
+@media screen and (max-width: 767px) {
+
+  .parallax {
+    min-height: 128px;
+  }
+
+  .col-card {
+    padding: 0px;
+    margin-top: 30px;
+    width: 25%;
+  }
+
+  .col-card .card {
+    height: 80px;
+    margin: 6px;
+    padding: 0px;
+  }
+
+  .col-card i {
+    font-size: 22px;
+    width: 100%;
+  }
+
+  .col-card span {
+    font-size: 10px;
+  }
+
+  .col-card .card h3 {
+    margin-top: 5px;
+  }
+}
+
+/* Responsive text of cards */
+@media (max-width:900px) and (min-width:768px) {
+
+  .col-card {
+    margin-top: 12px;
+  }
+
+  .col-card .card {
+    height: 100px;
+    margin: 25px -5px 0px;
+    padding: 12px;
+  }
+
+  .col-card i {
+    font-size: 25px;
+  }
+
+  .col-card span {
+    font-size: 14px;
+  }
+
+  .parallax {
+    min-height: 150px;
+  }
+}
+
+/* Responsive text of cards */
+@media (max-width:1264px) and (min-width:900px) {
+
+  .col-card {
+    margin-top: 12px;
+  }
+
+  .col-card .card {
+    height: 100px;
+    margin: 25px 5px 0px;
+    padding: 10px;
+  }
+
+  .col-card i {
+    font-size: 25px;
+  }
+
+  .col-card span {
+    font-size: 16px;
+  }
+
+  .parallax {
+    min-height: 150px;
+  }
+}
