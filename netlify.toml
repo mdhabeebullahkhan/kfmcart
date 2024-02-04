@@ -2,7 +2,7 @@
   included_files = [
   "node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/amp-context*",
   "node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/head-manager-context*",
-],
+]
 
 [[headers]]
   # Define which paths this specific [[headers]] block will cover.
