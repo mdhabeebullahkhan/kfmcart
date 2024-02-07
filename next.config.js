@@ -5,7 +5,7 @@ module.exports = {
     poweredByHeader: false,
     async headers() {
         return [{
-            source: '/(.*)',
+            // source: '/(.*)',
             // headers: createSecureHeaders({
             //     forceHTTPSRedirect: [true, { maxAge: 63072000, includeSubDomains: true }],
             //     referrerPolicy: "same-origin",
@@ -15,7 +15,7 @@ module.exports = {
             //     xssProtection: "block-rendering",
 
             // }),
-
+            source: "/api/(.*)",
             headers: [
                 // Allow for specific domains to have access or * for all
                 {
