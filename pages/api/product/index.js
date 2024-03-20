@@ -72,7 +72,7 @@ const createProduct = async (req, res) => {
         const product = await Products.findOne({ title: title.toLowerCase() });
         if (product) return res.status(400).json({ err: 'Product Name already exist, please choose different name.' })
 
-        const newProduct = await new Products({
+        const newProduct = new Products({
             title: title.toLowerCase(), mrpPrice, price, tax, totalPrice, inStock, description, content, categories, images, discount, attributesRequired
         })
         const productCreated = await newProduct.save()
